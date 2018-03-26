@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>bug investigate</title>
+  <style>
+    #container {
+      width: 100%;
+      background: #4b7ada;
+      height: 1000px;
+    }
+    #content {
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: #c4f0ff;
+    }
+    #show {
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="content">
+      <label>Focus after hiding address bar.</label>
+      <input type="text" value="">
+    </div>
+  </div>
+  <button id="show" type="button" name="button">show content</button>
+  <script>
+    document.getElementById('show').addEventListener('click', () => {
+      document.getElementById('content').style['position'] = 'fixed';
+      document.getElementById('content').style['display'] = 'block';
+    })
+  </script>
+</body>
+
+</html>
