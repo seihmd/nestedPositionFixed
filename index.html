@@ -18,20 +18,20 @@
       width: 100%;
       background: #c4f0ff;
     }
-    #show {
-
-    }
   </style>
 </head>
 
 <body>
   <div id="container">
     <div id="content">
-      <label>Focus after hiding address bar.</label>
-      <input type="text" value="">
     </div>
   </div>
-  <button id="show" type="button" name="button">show content</button>
+  <div class="">
+    <label>1. Focus textbox after hiding address bar.</label>
+    <input type="text" value="">
+  </div>
+  <button id="show" type="button" name="button">2. show nested fixed content</button>
+  <div style="margin: 300px"></div>
   <script>
     document.getElementById('show').addEventListener('click', () => {
       document.getElementById('content').style['position'] = 'fixed';
